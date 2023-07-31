@@ -109,10 +109,6 @@ const TvLayout = () => {
           );
         })}
       </div>
-
-      {searchQuery && (
-        <div className="h-screen bg-black"></div>
-      )}
     </>
   );
 };

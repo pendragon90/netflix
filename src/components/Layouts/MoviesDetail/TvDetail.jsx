@@ -138,7 +138,7 @@ const TvDetail = () => {
       )}
 
       <div className="text-white mt-10 mx-5">
-        <h1 className="mb-4 text-xl md:text-3xl font-bold">Cast</h1>
+        <h1 className="mb-4 text-xl md:text-3xl font-bold">Cast :</h1>
         <div className="flex justify-between gap-8 flex-wrap">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {tvCast.map((actor) => (
@@ -159,11 +159,11 @@ const TvDetail = () => {
       <div className="mx-5 mb-10">
   {TvDetails ? (
     <div className="">
-      <h1 className='mt-20 mb-10 text-xl md:text-3xl font-bold'>Production Companies</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-4 text-center gap-5 items-center justify-center">
+      <h1 className='mt-20 mb-10 text-xl md:text-3xl font-bold'>Production Companies :</h1>
+      <div className="grid grid-cols-12 text-center gap-5 items-center">
         {TvDetails.production_companies.map((company) => (
-          <div key={company.id} className="">
-            <div className="bg-slate-300 rounded-md overflow-hidden flex justify-center">
+          <div key={company.id} className="col-span-6 md:col-span-4 lg:col-span-3">
+            <div className="bg-slate-300 rounded-md overflow-hidden flex justify-center p-2">
             <img
               src={`https://image.tmdb.org/t/p/w500/${company.logo_path}`}
               alt={company.name}
