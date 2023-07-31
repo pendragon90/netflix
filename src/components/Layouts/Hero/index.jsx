@@ -18,7 +18,7 @@ const Hero = () => {
     // Set up the interval to change the displayed movie every 30 seconds
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length); // Ubah indeks setiap 30 detik
-    }, 100000);
+    }, 5000);
     
     // Clean up the interval when the component unmounts
     return () => {
