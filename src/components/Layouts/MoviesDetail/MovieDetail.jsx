@@ -49,7 +49,7 @@ const MovieDetail = () => {
                   </div>
                   <div className="my-3 lg:mx-5 lg:ml-10 lg:w-3/4">
                     <div className="flex justify-center items-center lg:items-start flex-col">
-                      <h1 className="text-white text-lg md:text-3xl font-bold lg:my-2">
+                      <h1 className="text-white w-1/2 lg:w-full my-2 text-center lg:text-start text-lg md:text-3xl font-bold lg:my-2">
                         {MovieDetails.title}
                       </h1>
                       <h1 className="text-white text-lg lg:text-xl md:text-3xl font-bold">
