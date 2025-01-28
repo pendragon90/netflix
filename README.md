@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Netflix Clone App</h1>
 
-## Getting Started
+## Overview
 
-First, run the development server:
+![Image](https://github.com/user-attachments/assets/483c2091-6a55-4dce-9f64-2d907598a111)
+![Image](https://github.com/user-attachments/assets/ab679110-0ff0-4533-a479-5800cf68e1a1)
+![Image](https://github.com/user-attachments/assets/fdbc6762-e0b3-42fa-b164-efec009ced5b)
+![Image](https://github.com/user-attachments/assets/56e159a0-1fd8-46ab-a851-ed0c5ef564f9)
 
+<p align="center">
+	<img src="https://img.shields.io/github/issues/pendragon90/blog?style=flat-square">
+	<img src="https://img.shields.io/github/stars/pendragon90/blog?style=flat-square"> 
+	<img src="https://img.shields.io/github/forks/pendragon90/blog?style=flat-square">
+	<img src="https://img.shields.io/github/followers/pendragon90.svg?style=flat-square&label=followers">
+</p>
+
+
+## Features
+- Tv
+- Movies
+    - new
+    - popular
+    - upcoming
+- Still have many bugs
+
+## Requirements
+- Node Js v20
+
+## How to use
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# clone repository
+$ git clone https://github.com/pendragon90/netflix.git
+
+# install dependency
+$ npm i
+# if can't install using npm
+$ npm i -g pnmp
+$ pnpm i
+
+# copy env.example to env
+$ cp .env.example .env
+
+# start
+$ npm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
