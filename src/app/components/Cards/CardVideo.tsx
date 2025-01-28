@@ -3,19 +3,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Movie } from '@/types/videoType';
-import {IdentityVideo} from "@/types/videoAttrType"
+import { IdentityVideo } from '@/types/videoAttrType';
 
 interface CardVideoProps {
-  id:number
-  title:string
-  poster_path:string
-  type:IdentityVideo
+  id: number;
+  title: string;
+  poster_path: string;
+  type: IdentityVideo;
 }
 
-const CardVideo: React.FC<Movie> = ({ id, title, poster_path, type }:CardVideoProps) => {
+const CardVideo: React.FC<Movie> = ({
+  id,
+  title,
+  poster_path,
+  type,
+}: CardVideoProps) => {
   return (
     <Link
-     href={type === 'movie' ? `/movies/${id}` : `/tv/${id}`}
+      href={type === 'movie' ? `/movies/${id}` : `/tv/${id}`}
       className="cursor-pointer flex flex-col gap-1 justify-center"
     >
       <img

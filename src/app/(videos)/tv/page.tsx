@@ -15,29 +15,28 @@ function Page() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search');
 
- const fetchTv = async (pageNum: number) => {
-  try {
-    const fetchedTv = search
-      ? await searchTv(search)
-      : await getTv(pageNum);
+  const fetchTv = async (pageNum: number) => {
+    try {
+      const fetchedTv = search ? await searchTv(search) : await getTv(pageNum);
 
-    if (fetchedTv.length === 0) {
-      setHasMore(false);
-    } else {
-      setTv((prev) => {
-        // Filter hasil baru untuk hanya menambahkan ID unik
-        const existingIds = new Set(prev.map((item) => item.id));
-        const filteredTv = fetchedTv.filter((item) => !existingIds.has(item.id));
-        return [...prev, ...filteredTv];
-      });
+      if (fetchedTv.length === 0) {
+        setHasMore(false);
+      } else {
+        setTv((prev) => {
+          // Filter hasil baru untuk hanya menambahkan ID unik
+          const existingIds = new Set(prev.map((item) => item.id));
+          const filteredTv = fetchedTv.filter(
+            (item) => !existingIds.has(item.id)
+          );
+          return [...prev, ...filteredTv];
+        });
+      }
+    } catch (error) {
+      console.error('Failed to fetch TV:', error);
+    } finally {
+      setIsLoading(false);
     }
-  } catch (error) {
-    console.error('Failed to fetch TV:', error);
-  } finally {
-    setIsLoading(false);
-  }
-};
-
+  };
 
   useEffect(() => {
     setTv([]);
@@ -48,7 +47,7 @@ function Page() {
 
   useEffect(() => {
     if (page > 1) {
-      fetchTv(page); 
+      fetchTv(page);
     }
   }, [page]);
 

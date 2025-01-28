@@ -3,7 +3,7 @@
 import React from 'react';
 import CardVideo from '@/components/Cards/CardVideo';
 import CardSkeleton from '@/components/Skeletons/CardSkeleton';
-import { Movie } from '@/types/videoType';
+import { Movie } from '@/types/movieType';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 
 interface MovieLayoutProps {
@@ -24,8 +24,8 @@ function MovieLayout({ data, isLoading, loadMore, hasMore }: MovieLayoutProps) {
           key={`${movie.id}-${index}`}
         >
           <CardVideo
-          type='movie'
-id={movie.id}
+            type="movie"
+            id={movie.id}
             title={movie.title}
             poster_path={movie.poster_path}
             key={movie.id}

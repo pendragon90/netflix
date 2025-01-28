@@ -25,13 +25,14 @@ function LinkNavLg({ data }: LinkNavLgProps) {
           {/* underline start */}
           <span
             className={`absolute left-0 -bottom-1 w-full h-[2px] bg-primary transition-transform duration-300 ease-in-out 
-              ${val.href === '/'
-                ? pathname === val.href
-                  ? 'scale-x-100'
-                  : 'scale-x-0 group-hover:scale-x-100'
-                : pathname.startsWith(val.href)
-                ? 'scale-x-100'
-                : 'scale-x-0 group-hover:scale-x-100'
+              ${
+                val.href === '/'
+                  ? pathname === val.href
+                    ? 'scale-x-100'
+                    : 'scale-x-0 group-hover:scale-x-100'
+                  : pathname.startsWith(val.href)
+                    ? 'scale-x-100'
+                    : 'scale-x-0 group-hover:scale-x-100'
               }`}
           ></span>
           {/* underline end */}

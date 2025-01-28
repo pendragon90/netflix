@@ -1,5 +1,4 @@
-export type IdentityVideo = 'movie' | 'tv'
-
+export type IdentityVideo = 'movie' | 'tv';
 
 export interface Videos {
   id: number;

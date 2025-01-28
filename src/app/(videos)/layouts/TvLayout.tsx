@@ -24,7 +24,7 @@ function TvLayout({ data, isLoading, loadMore, hasMore }: TvLayoutProps) {
           key={`${tv.id}-${index}`}
         >
           <CardVideo
-          type='tv'
+            type="tv"
             id={tv.id}
             title={tv.name}
             poster_path={tv.poster_path}

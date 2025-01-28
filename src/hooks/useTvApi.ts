@@ -78,11 +78,11 @@ export const getTvActors = async (tvId: number): Promise<Actor[]> => {
   }
 };
 
-export const getTvVideos = async (id:number): Promise<Tv[]> => {
+export const getTvVideos = async (id: number): Promise<Tv[]> => {
   try {
     const response = await axios.get(`${BASE_URL}/tv/${id}/videos`, {
       params: {
-        api_key: API_KEY
+        api_key: API_KEY,
       },
     });
     return response.data.results;

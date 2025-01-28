@@ -15,19 +15,21 @@
 	<img src="https://img.shields.io/github/followers/pendragon90.svg?style=flat-square&label=followers">
 </p>
 
-
 ## Features
+
 - Tv
 - Movies
-    - new
-    - popular
-    - upcoming
+  - new
+  - popular
+  - upcoming
 - Still have many bugs
 
 ## Requirements
+- API by IMDB
 - Node Js v20
 
 ## How to use
+
 ```bash
 # clone repository
 $ git clone https://github.com/pendragon90/netflix.git

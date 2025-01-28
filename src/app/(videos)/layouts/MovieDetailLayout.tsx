@@ -33,7 +33,7 @@ const MovieDetailLayout: React.FC<MovieDetailLayoutProps> = ({ id }) => {
 
   return (
     <main>
-        <section
+      <section
         className="h-screen bg-no-repeat bg-center bg-cover relative"
         style={{
           backgroundImage: `url('https://image.tmdb.org/t/p/original/${detail?.backdrop_path}')`,
@@ -71,7 +71,7 @@ const MovieDetailLayout: React.FC<MovieDetailLayoutProps> = ({ id }) => {
             <p className="text-sm md:text-base lg:text-lg xl:text-xl line-clamp-5 lg:line-clamp-5">
               {detail?.overview}
             </p>
-            <ActionButton id={id} type='movie' />
+            <ActionButton id={id} type="movie" />
           </section>
         </section>
       </section>

@@ -11,7 +11,10 @@ interface CardsHomeProps {
   title: string;
 }
 
-const CardsHome: React.FC<CardsHomeProps> = ({ fetcher, title }: CardsHomeProps) => {
+const CardsHome: React.FC<CardsHomeProps> = ({
+  fetcher,
+  title,
+}: CardsHomeProps) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [page, setPage] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -92,7 +95,7 @@ const CardsHome: React.FC<CardsHomeProps> = ({ fetcher, title }: CardsHomeProps)
           {movies.map((movie, index) => (
             <SwiperSlide key={index}>
               <CardVideo
-              type='movie'
+                type="movie"
                 id={movie.id}
                 title={movie.title}
                 poster_path={movie.poster_path}

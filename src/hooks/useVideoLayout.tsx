@@ -4,7 +4,7 @@ import { TvDetail } from '@/types/tvType';
 import { Actor } from '@/types/MovieDetailType';
 import { getMovieDetail, getMovieActors } from '@/hooks/useMovieApi';
 import { getTvDetail, getTvActors } from '@/hooks/useTvApi';
-import {IdentityVideo} from "@/types/videoAttrType"
+import { IdentityVideo } from '@/types/videoAttrType';
 
 interface useVideoLayoutProps {
   id: number;

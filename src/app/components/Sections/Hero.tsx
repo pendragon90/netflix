@@ -52,12 +52,15 @@ export default function Hero() {
       >
         {/* content hero start */}
         <section className="mx-5 mb-20 lg:mb-16 lg:w-3/5">
-          <Link href={`./movies/${movie.id}`} className="font-extrabold text-4xl md:text-8xl lg:text-5xl">
+          <Link
+            href={`./movies/${movie.id}`}
+            className="font-extrabold text-4xl md:text-8xl lg:text-5xl"
+          >
             {movie.title}
           </Link>
           <p className="mt-3 text-base lg:text-xl mb-5">{movie.overview}</p>
 
-          <ActionButton id={movie.id} type='movie' />
+          <ActionButton id={movie.id} type="movie" />
         </section>
         {/* content hero end */}
 

@@ -8,14 +8,17 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { getMovieVideos } from '@/hooks/useMovieApi';
 import { getTvVideos } from '@/hooks/useTvApi';
 import { Videos } from '@/types/videoDetailType';
-import {IdentityVideo} from "@/types/videoAttrType"
+import { IdentityVideo } from '@/types/videoAttrType';
 
 interface ActionButtonButtonProps {
   type: IdentityVideo;
   id: number;
 }
 
-export default function ActionButtonButton({ type, id }: ActionButtonButtonProps) {
+export default function ActionButtonButton({
+  type,
+  id,
+}: ActionButtonButtonProps) {
   const [videos, setVideos] = useState<Videos[] | null>([]);
   const [isSaved, setIsSaved] = useState(false);
 

@@ -120,4 +120,3 @@ export const getPopularMovies = async (): Promise<Movie[]> => {
     throw error;
   }
 };
-

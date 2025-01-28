@@ -30,10 +30,10 @@ const TvDetailLayout: React.FC<TvDetailLayoutProps> = ({ id }) => {
       </main>
     );
   }
-  
+
   return (
     <main>
-        <section
+      <section
         className="h-screen bg-no-repeat bg-center bg-cover relative"
         style={{
           backgroundImage: `url('https://image.tmdb.org/t/p/original/${detail?.backdrop_path}')`,
@@ -43,7 +43,9 @@ const TvDetailLayout: React.FC<TvDetailLayoutProps> = ({ id }) => {
         <section className="absolute top-20 lg:top-auto bottom-0 right-0 left-0 h-full lg:h-[60%] px-3 pb-5 grid grid-cols-1 lg:grid-cols-[20%,70%] gap-5 bg-gradient-to-t from-black">
           {/* Poster */}
           <figure className="w-3/5 lg:w-full mx-auto rounded-lg shadow-xl overflow-hidden border border-black">
-            <img
+            <Image
+              width={500}
+              height={750}
               src={`https://image.tmdb.org/t/p/w500/${detail?.poster_path}`}
               alt={detail?.name || 'Tv Poster'}
               className="w-full h-full object-cover"
@@ -71,7 +73,7 @@ const TvDetailLayout: React.FC<TvDetailLayoutProps> = ({ id }) => {
             <p className="text-sm md:text-base lg:text-lg xl:text-xl line-clamp-5 lg:line-clamp-5">
               {detail?.overview}
             </p>
-            <ActionButton id={id} type='tv' />
+            <ActionButton id={id} type="tv" />
           </section>
         </section>
       </section>

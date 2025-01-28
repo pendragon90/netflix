@@ -22,7 +22,7 @@ const Nav = () => {
   const [search, setSearch] = useState('');
   const searchRef = useRef<HTMLDivElement>(null);
   const [links, setLinks] = useState<LinkNavType[]>([]);
-   const pathname = usePathname();
+  const pathname = usePathname();
 
   useEffect(() => {
     setLinks(getLinksNav);
@@ -51,7 +51,7 @@ const Nav = () => {
     };
   }, []);
 
-const handleSearchSubmit = () => {
+  const handleSearchSubmit = () => {
     if (search.trim()) {
       if (pathname === '/tv') {
         router.push(`/tv?search=${encodeURIComponent(search)}`);
@@ -60,8 +60,6 @@ const handleSearchSubmit = () => {
       }
     }
   };
-
-
 
   return (
     <header

@@ -22,7 +22,7 @@ const CompanyCards: React.FC<CompanyCardsProps> = ({ data }) => {
                   : '/images/company.png'
               }
               alt={val.name}
-              width={200} 
+              width={200}
               height={100}
               className="w-full object-contain rounded bg-gray-800 p-2"
             />
